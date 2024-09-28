@@ -31,7 +31,7 @@ The Power BI report is structured into three main pages:
      - **Anxiety** negatively impacting **academic performance** (-0.65).
      - Insights on how bullying is associated with mental health issues.
 
-## DAX Measures and Python Code
+## DAX Measures
 - Academic negative effect = COUNTROWS(FILTER(StressLevelDataset,StressLevelDataset[academic_performance]<3&&StressLevelDataset[study_load]>3&&StressLevelDataset[teacher_student_relationship]<3&&StressLevelDataset[future_career_concerns]<2))
 - Physiological negative effect = COUNTROWS(FILTER(StressLevelDataset,StressLevelDataset[headache]>3&&StressLevelDataset[blood_pressure]>2&&StressLevelDataset[sleep_quality]<3&&StressLevelDataset[breathing_problem]>3))
 - Environmental negative effect = COUNTROWS(FILTER(StressLevelDataset,StressLevelDataset[noise_level]>3&&StressLevelDataset[living_conditions]<3&&StressLevelDataset[safety]<2&&StressLevelDataset[basic_needs]<3))
@@ -47,7 +47,7 @@ The Power BI report is structured into three main pages:
 - Students with low self esteem = COUNTROWS(FILTER(StressLevelDataset,StressLevelDataset[self_esteem]<AVERAGE(StressLevelDataset[self_esteem])))
 - unmet basic needs = COUNTROWS(FILTER(StressLevelDataset,StressLevelDataset[basic_needs]<=2))
 
-  ## Python code for Correlation Heatmap
+## Python code for Correlation Heatmap
   import seaborn as sns
   import matplotlib.pyplot as plt
   sns.heatmap(dataset.corr(), cmap='Purples', annot=True)
