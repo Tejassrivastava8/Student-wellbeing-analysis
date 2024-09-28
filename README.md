@@ -48,10 +48,12 @@ The Power BI report is structured into three main pages:
 - unmet basic needs = COUNTROWS(FILTER(StressLevelDataset,StressLevelDataset[basic_needs]<=2))
 
 ## Python code for Correlation Heatmap
-  import seaborn as sns
+  ```python
+   import seaborn as sns
   import matplotlib.pyplot as plt
   sns.heatmap(dataset.corr(), cmap='Purples', annot=True)
   plt.show()
+```
 
 
 
